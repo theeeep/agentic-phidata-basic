@@ -8,4 +8,5 @@ dependencies = [
     "duckduckgo-search>=7.2.0",
     "groq>=0.13.1",
     "phidata>=2.7.6",
+    "yfinance>=0.2.51",
 ]

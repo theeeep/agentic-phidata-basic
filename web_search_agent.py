@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Web Search Agent
 web_search_agent = Agent(
     name="Web Search Agent",
     description="An agent that searches the web using DuckDuckGo.",
