@@ -17,4 +17,4 @@ web_search_agent = Agent(
     debug_mode=True,
 )
 
-web_search_agent.print_response("Who is Elon Musk?", stream=True)
+# web_search_agent.print_response("Who is Elon Musk?", stream=True)

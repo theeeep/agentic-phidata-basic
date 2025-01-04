@@ -25,4 +25,4 @@ finance_agent = Agent(
     debug_mode=True,
 )
 
-finance_agent.print_response("Summarize analyst recomendations for NVDA", stream=True)
+# finance_agent.print_response("Summarize analyst recomendations for NVDA", stream=True)
