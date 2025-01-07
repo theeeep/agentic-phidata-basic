@@ -1,9 +1,15 @@
 from phi.agent import Agent
 from phi.model.groq import Groq
-from phi.storage.agent.sqlite import SqlAgentStorage
 from phi.tools.duckduckgo import DuckDuckGo
 from phi.tools.yfinance import YFinanceTools
 from phi.playground import Playground, serve_playground_app
+from dotenv import load_dotenv
+import os
+import phi
+
+load_dotenv()
+
+phi.api = os.getenv("PHI_API_KEY")
 
 # Web Search Agent
 web_search_agent = Agent(
@@ -14,9 +20,8 @@ web_search_agent = Agent(
     instructions=["Always include the resource in the response"],
     show_tool_calls=True,
     markdown=True,
-    debug_mode=True,
+    # debug_mode=True,
 )
-
 # Finance Agent
 finance_agent = Agent(
     name="Finance Agent",
@@ -28,6 +33,7 @@ finance_agent = Agent(
             company_info=True,
             company_news=True,
             analyst_recommendations=True,
+            stock_fundamentals=True,
         )
     ],
     instructions=[
@@ -36,7 +42,7 @@ finance_agent = Agent(
     ],
     show_tool_calls=True,
     markdown=True,
-    debug_mode=True,
+    # debug_mode=True,
 )
 
 
