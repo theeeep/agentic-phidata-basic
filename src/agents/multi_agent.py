@@ -21,5 +21,5 @@ agent_team = Agent(
     debug_mode=True,
 )
 agent_team.print_response(
-    "Summarize analyst recomendations and share the latest news for NVDA", stream=True
+    "Summarize analyst recomendations and share the latest news for Apple", stream=True
 )

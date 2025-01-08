@@ -19,7 +19,9 @@ finance_agent = Agent(
             analyst_recommendations=True,
         )
     ],
-    instructions="Use tables to display the results. Always include the resource in the response",
+    instructions=[
+        "Use tables to display the results. Always include the resource in the response"
+    ],
     show_tool_calls=True,
     markdown=True,
     debug_mode=True,
